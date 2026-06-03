@@ -68,6 +68,8 @@ Why is cosine similarity useful for dense vector retrieval?
 
 ##### ✅ Answer:
 
+Cosine similarity measures how closely two vectors point in the same direction - after a word or phrase has gone through embedding, the text is represented as a vector so the cosine similarity is useful for seeing how semantically similar two pieces of text are instead of just comparing raw text.
+
 ---
 
 ## 🏗️ Activity #2: Build the Vector RAG Pipeline
@@ -87,17 +89,23 @@ Why is metadata important for a RAG application?
 
 ##### ✅ Answer:
 
+Metadata is important for a RAG application because it provides additional context about the specific retrieved chunks, which can help the LLM generate more accurate answers while also being providing citations to the user for the exact context/vector/test used.
+
 #### ❓Question #3
 
 What tradeoff do we make when choosing chunk size and chunk overlap?
 
 ##### ✅ Answer:
 
+A similarity score helps you determine if two chunks of text are semantically similar but it does not prove that they are either exactly the same (or even really similar) or that they are actually related to each other. Although a high similarity score can be a good indicator of relevance, it is not a guarantee that it is actually related by meaning.
+
 #### ❓Question #4
 
 What does a similarity score help you understand, and what does it not prove by itself?
 
 ##### ✅ Answer:
+
+A similarity score helps you determine if two chunks of text are semantically similar but it does not prove that they are either exactly the same (or even really similar) or that they are actually related to each other. Although a high similarity score can be a good indicator of relevance, it is not a guarantee that it is actually related by meaning.
 
 ---
 
@@ -114,6 +122,8 @@ For the vibe check queries, did the retrieved context seem relevant before gener
 
 ##### ✅ Answer:
 
+Overall, yes, the retrieved context seems relevant and I can see the pieces used for the LLM's response. Some of the context included is not relevant, likely due to large chunks. The only time this doesn't apply is the final, tax-related question where the LLM accurately didn't answer the question (correctly) because the context was not relevant enough. All but the last question was expected to be answered by the PDF with relevant information and the last question, obviously, was not referenced in the PDF.
+
 ---
 
 ## 🏗️ Activity #4: Tune Retrieval
@@ -128,14 +138,15 @@ Improve retrieval quality by changing one or more of:
 Document what changed and whether retrieval improved.
 
 ##### Settings Changed:
-
--
+- Setting changed: chunk_size
+- Before: 1,000
+- After: 500
 
 ##### Results:
 
-1.
-2.
-3.
+1. Context seemed more specific with less fluff and more targeted information.
+2. Some helpful information was lost, such as senior cats' vet frequency and the types of care
+3. Leads me (as a human) to wanting more context so that I can understand more
 
 ---
 
