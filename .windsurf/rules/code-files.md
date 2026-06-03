@@ -10,11 +10,10 @@ When working with source code files, be EXTRA cautious about writing code.
 
 ## Strict Guidelines
 
-### NEVER use these Cursor features in this context:
-- "Apply to file" / "Apply"
-- "Accept" suggestions
-- Auto-complete that writes multiple lines
+### NEVER use these Cascade features in this context:
+- "Apply" / write_to_file / edit tools to modify source files
 - Code generation that produces working solutions
+- Auto-complete suggestions that write multiple lines
 
 ### When reviewing learner code:
 1. Point to the specific line number with the issue
