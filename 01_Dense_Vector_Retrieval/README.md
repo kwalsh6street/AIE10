@@ -98,7 +98,7 @@ What tradeoff do we make when choosing chunk size and chunk overlap?
 
 ##### ✅ Answer:
 
-A similarity score helps you determine if two chunks of text are semantically similar but it does not prove that they are either exactly the same (or even really similar) or that they are actually related to each other. Although a high similarity score can be a good indicator of relevance, it is not a guarantee that it is actually related by meaning.
+By decreasing chunk size (less text in a chunk) or increasing overlap (more redundant text in chunks), there are inherently more chunks to store. However, with a smaller chunk size, you are more likely to capture only parts of sentences which could actually increase cosine similarity because it has more focused text but also lose information needed to actually answer a question. With overlap, you can avoid losing context at chunk boundaries by storing multiple parts of the same sentence multiple times, ensuring ideas aren't cut off.
 
 #### ❓Question #4
 
