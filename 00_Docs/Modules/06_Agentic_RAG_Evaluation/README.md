@@ -41,7 +41,7 @@ What if we had a generic framework to answer the “Is my app good, right, or co
 
 </aside>
 
-In module 8, we explore a generic framework that does exactly this, built specifically to assess Retrieval Augmented Generation (RAG) systems.  Meet RAG ASsessment (RAGAS), the leading-edge evaluation tool for RAG applications.  RAGAS ([YC24](https://www.ycombinator.com/companies/ragas)) is attempting to develop the industry standard for analyzing RAG applications, and they’ve made great strides and progress in the last year!
+In module 6, we explore a generic framework that does exactly this, built specifically to assess Retrieval Augmented Generation (RAG) systems.  Meet RAG ASsessment (RAGAS), the leading-edge evaluation tool for RAG applications.  RAGAS ([YC24](https://www.ycombinator.com/companies/ragas)) is attempting to develop the industry standard for analyzing RAG applications, and they’ve made great strides and progress in the last year!
 
 Today we’ll dig into the metrics we can use across RAG applications. We’ll look at their definitions and how they’re calculated, and reflect on how we would think about leveraging them!
 
