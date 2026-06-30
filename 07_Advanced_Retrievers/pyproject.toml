@@ -17,6 +17,7 @@ dependencies = [
     "pypdf>=6.0.0,<7.0.0",
     "qdrant-client>=1.15.0,<2.0.0",
     "rank-bm25>=0.2.2,<1.0.0",
+    "dotenv>=0.9.9",
 ]
 
 [tool.uv]
