@@ -155,7 +155,7 @@ Why is OAuth important for MCP servers, and what security considerations should 
 
 #### Answer
 
-_(insert your answer here)_
+OAuth ensures that a user can act only as themselves instead of on behalf of another user. This prevents any unauthenticated usage leakage of sensitive information.
 
 ### Question #2
 
@@ -163,7 +163,7 @@ What is Streamable HTTP transport in MCP, and why might you expose a server publ
 
 #### Answer
 
-_(insert your answer here)_
+Streamable HTTP makes MCP servers network-accessible and multi-tenant. OAuth is the mechanism that enforces identity and authorization in place of the process-isolation that stdio got for free. You'd choose this combination when you want remote AI clients, multiple users, or persistent server state.
 
 ## Activity 1: Extend the MCP Server
 

@@ -36,6 +36,25 @@ async def list_products(category: str | None = None) -> list[dict]:
 
 
 @mcp.tool()
+async def search_products(query: str, category: str | None = None) -> list[dict]:
+    """Search the cat shop catalog by keyword. Matches against product names and descriptions."""
+    db = await oauth_provider._get_db()
+    search_term = f"%{query.lower()}%"
+    sql = """SELECT id, name, description, price, category FROM products
+             WHERE (LOWER(name) LIKE ? OR LOWER(description) LIKE ?)"""
+    params: list = [search_term, search_term]
+    if category:
+        sql += " AND category = ?"
+        params.append(category)
+    cursor = await db.execute(sql, params)
+    rows = await cursor.fetchall()
+    return [
+        {"id": r[0], "name": r[1], "description": r[2], "price": r[3], "category": r[4]}
+        for r in rows
+    ]
+
+
+@mcp.tool()
 async def get_product(product_id: int) -> dict:
     """Get full details of a single product by its ID."""
     db = await oauth_provider._get_db()
