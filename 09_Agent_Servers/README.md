@@ -428,7 +428,7 @@ Why does LangSmith deploy your agent as an API backend only, and why do you stil
 
 #### Answer
 
-_(insert your answer here)_
+This obeys the principle of separation of concerns - the backend is responsible for executing the agent logic, while the frontend is responsible for rendering the user interface. Additionally, it allows for better security and scalability.
 
 ### Question #2
 
@@ -436,7 +436,7 @@ Why should the LangSmith API key live in a Next.js API route (server-side) inste
 
 #### Answer
 
-_(insert your answer here)_
+The LangSmith API key should live in a Next.js API route (server-side) instead of in the browser because it is a secret key that should not be exposed to the client. If it were exposed in the browser, it could be accessed by anyone who inspects the page source or uses browser developer tools, which would allow them to make unauthorized requests to the LangSmith API.
 
 ## Activity 1: Build a Helpfulness Loop in Production
 
