@@ -442,6 +442,10 @@ The LangSmith API key should live in a Next.js API route (server-side) instead o
 
 Build an `agent_with_helpfulness` graph that adds a post-response helpfulness check: after the agent answers, a judge model decides whether the response is helpful, and if not, the graph loops back for another attempt (with a safe loop limit). Register it in `langgraph.json`, deploy it, then compare LangSmith traces for queries that pass vs. fail the helpfulness check. Does the retry loop behave differently in Studio vs. production?
 
+#### Answer
+
+The retry loop behaves differently in Studio vs. production because in Studio, you can actually step through each retry attempt and see the state of the graph at each step. In production, the retry loop is executed automatically and you can only see the final result. Additionally, in Studio you can see the state of the graph at each step (and roll back to a certain step), while in production you can only see the final result without stopping or rolling back.
+
 ## Advanced Activity: Auth and Custom Routes
 
 Research [LangSmith Deployments custom routes](https://github.com/langchain-samples/lsd-custom-route-react-ui) and describe how you could add authentication so each user only sees their own threads. Optionally implement a simple auth gate on your Vercel frontend.
