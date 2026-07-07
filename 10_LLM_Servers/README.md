@@ -83,7 +83,7 @@ What is the difference between serverless and dedicated endpoints?
 
 #### ✅ Answer:
 
-_(insert your answer here)_
+Serverless gives shared infra, the ability to scale to 0 and up very quickly, though reliability can be an issue if the load is very bursty. Dedicated endpoints provide guaranteed capacity and consistent performance, but require manual scaling and cost more.
 
 ### ❓ Question #2:
 
@@ -91,7 +91,7 @@ Why is it important to consider token throughput and latency when choosing an LL
 
 #### ✅ Answer:
 
-_(insert your answer here)_
+A user's perception of speed and responsiveness is critical for user satisfaction. High latency can make an application feel sluggish and unresponsive, leading to user frustration and abandonment. Token throughput determines how many requests can be handled simultaneously, which is crucial for maintaining performance under load.
 
 ## Activity 1: RAGAS Evaluation with Cost Analysis
 

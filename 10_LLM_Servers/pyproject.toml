@@ -3,7 +3,7 @@ name = "16-llm-servers"
 version = "0.1.0"
 description = "LLM Servers with Fireworks AI"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "jupyter>=1.1.1",
     "openai>=1.100.2",
@@ -13,7 +13,7 @@ dependencies = [
     "langchain-tavily>=0.1.0",
     "langgraph>=1.0.10",
     "langchain-core>=1.2.16",
-    "langchain-community>=0.4.1",
+    "langchain-community==0.3.31",
     "langchain-text-splitters>=1.1.1",
     "langchain-qdrant>=1.1.0",
     "qdrant-client>=1.17.0",
@@ -23,4 +23,9 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "langgraph-cli>=0.4.14",
     "langgraph-api>=0.4.28",
+    "langsmith>=0.3.0",
+    "pandas>=2.2.0",
+    "datasets>=3.0.0",
+    "instructor>=1.15.0,<2.0.0",
+    "ragas @ git+https://github.com/vibrantlabsai/ragas.git@298b68274234c060deacab3cf5fb52aa3a20e885",
 ]
